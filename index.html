@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Algorithm Visual Framework | Portfolio Artifact</title>
+  <meta name="description" content="A comprehensive visual framework illustrating key machine learning algorithms, their types, application domains, and real-world use cases across Tabular Data, Computer Vision, NLP, and Generative AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <header class="hero">
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="badge">📚 Portfolio Artifact · Machine Learning</div>
+      <h1 class="hero-title">ML Algorithm<br /><span class="gradient-text">Visual Framework</span></h1>
+      <p class="hero-subtitle">
+        A comprehensive map of machine learning algorithms — their types, 
+        application domains, and real-world use cases across 
+        <em>Tabular Data, Computer Vision, NLP &amp; Generative AI</em>.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">12</span><span class="stat-label">Algorithms</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">AI Domains</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Learning Types</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint">↓ Explore</div>
+  </header>
+
+  <!-- ── FILTER TABS ── -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar" role="tablist" aria-label="Filter algorithms">
+        <button class="filter-btn active" data-filter="all" role="tab">All Algorithms</button>
+        <button class="filter-btn" data-filter="supervised" role="tab">Supervised</button>
+        <button class="filter-btn" data-filter="unsupervised" role="tab">Unsupervised</button>
+        <button class="filter-btn" data-filter="tabular" role="tab">📊 Tabular</button>
+        <button class="filter-btn" data-filter="cv" role="tab">👁️ Computer Vision</button>
+        <button class="filter-btn" data-filter="nlp" role="tab">💬 NLP</button>
+        <button class="filter-btn" data-filter="genai" role="tab">✨ Generative AI</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ALGORITHM CARDS ── -->
+  <main class="cards-section" id="algorithms">
+    <div class="container">
+      <div class="cards-grid" id="cardsGrid">
+
+        <!-- 1. Linear Regression -->
+        <article class="algo-card" 
+          data-type="supervised" 
+          data-domains="tabular"
+          id="card-linear-regression">
+          <div class="card-accent" style="--accent:#6366f1"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">📈</div>
+            <div>
+              <h2 class="card-title">Linear Regression</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-tabular">Tabular</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Fits a linear relationship between one or more input features and a continuous output by minimizing the sum of squared errors (least squares). The model learns weights (coefficients) for each feature.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Input Features</div>
+              <div class="arrow">→</div>
+              <div class="step">Fit Line (OLS)</div>
+              <div class="arrow">→</div>
+              <div class="step">Predict Value</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>House price prediction based on size &amp; location</li>
+              <li>Sales forecasting from ad spend</li>
+              <li>Risk scoring in insurance</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-tabular">📊 Tabular Data</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Decision Trees -->
+        <article class="algo-card algo-card--featured"
+          data-type="supervised"
+          data-domains="tabular"
+          id="card-decision-tree">
+          <div class="card-accent" style="--accent:#10b981"></div>
+          <div class="featured-ribbon">📌 Featured Case Study</div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#10b981,#34d399)">🌳</div>
+            <div>
+              <h2 class="card-title">Decision Trees</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-tabular">Tabular</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Partitions data recursively using feature thresholds to create a tree of if-else decision nodes, ending at leaf nodes that predict the output. Splits are chosen to maximize information gain or minimize Gini impurity.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Extract Features</div>
+              <div class="arrow">→</div>
+              <div class="step">Split on Threshold</div>
+              <div class="arrow">→</div>
+              <div class="step">Recurse Branches</div>
+              <div class="arrow">→</div>
+              <div class="step">Leaf Prediction</div>
+            </div>
+          </div>
+
+          <!-- ── CASE STUDY BLOCK ── -->
+          <div class="case-study-block">
+            <div class="case-study-header">
+              <span class="cs-icon">🍎</span>
+              <div>
+                <div class="cs-title">Sorting Fruits with a Decision Tree</div>
+                <div class="cs-meta">Devaraj, V. — Indiana Wesleyan University · Kaggle Fruits Dataset</div>
+              </div>
+            </div>
+            <p class="cs-description">
+              Because raw image pixels cannot be read directly by a Decision Tree, each fruit image is first converted into a compact table of measurable attributes. The tree then asks a series of if-then questions on those attributes to classify 5 fruit classes: <em>apple, banana, grape, mango, strawberry</em>.
+            </p>
+
+            <h3 class="section-label" style="margin-top:4px">🗂️ Feature Engineering — Image → Tabular</h3>
+            <div class="cs-pipeline">
+              <div class="csp-step">Raw Fruit Image</div>
+              <div class="csp-arrow">→</div>
+              <div class="csp-step">Crop Fruit Region</div>
+              <div class="csp-arrow">→</div>
+              <div class="csp-step">Extract Attributes</div>
+              <div class="csp-arrow">→</div>
+              <div class="csp-step">Decision Tree Classify</div>
+            </div>
+
+            <h3 class="section-label" style="margin-top:12px">🔬 Key Discriminating Attributes</h3>
+            <div class="cs-table-wrapper">
+            <table class="cs-table">
+              <thead>
+                <tr>
+                  <th>Attribute / Feature</th>
+                  <th>How It Is Measured</th>
+                  <th>Why It Helps</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dominant hue</td>
+                  <td>Avg. color of fruit region (red, yellow, green, purple)</td>
+                  <td>Banana → yellow; strawberry → red; grape → purple</td>
+                </tr>
+                <tr>
+                  <td>Color saturation &amp; brightness</td>
+                  <td>Avg. HSV saturation &amp; value of fruit region</td>
+                  <td>Separates vivid ripe fruit from dull or shaded fruit</td>
+                </tr>
+                <tr>
+                  <td>Aspect ratio</td>
+                  <td>Bounding-box width ÷ height of fruit</td>
+                  <td>Banana is elongated; apple &amp; grape are rounder</td>
+                </tr>
+                <tr>
+                  <td>Relative fruit area</td>
+                  <td>Fruit pixel count ÷ total image area</td>
+                  <td>Zoomed vs. wide-angle shots produce different scales</td>
+                </tr>
+                <tr>
+                  <td>Contour smoothness</td>
+                  <td>Perimeter² ÷ (4π × area)</td>
+                  <td>Grapes cluster in bunches → jagged edges; apple → smooth</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3 class="section-label" style="margin-top:12px">📂 Dataset Splits</h3>
+            <div class="cs-splits">
+              <div class="cs-split cs-train"><span class="cs-split-num">97%</span><span class="cs-split-label">Training</span></div>
+              <div class="cs-split cs-val"><span class="cs-split-num">2%</span><span class="cs-split-label">Validation</span></div>
+              <div class="cs-split cs-test"><span class="cs-split-num">1%</span><span class="cs-split-label">Test</span></div>
+            </div>
+          </div>
+          <!-- ── END CASE STUDY ── -->
+
+          <div class="card-section">
+            <h3 class="section-label">🌍 Other Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Loan approval / credit scoring</li>
+              <li>Medical diagnosis (rule-based explainability)</li>
+              <li>Customer churn prediction</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-tabular">📊 Tabular Data</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Random Forest -->
+        <article class="algo-card"
+          data-type="supervised"
+          data-domains="tabular"
+          id="card-random-forest">
+          <div class="card-accent" style="--accent:#f59e0b"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)">🌲</div>
+            <div>
+              <h2 class="card-title">Random Forest</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-tabular">Tabular</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            An ensemble of decision trees each trained on a random bootstrap sample with a random feature subset. Predictions are aggregated via majority vote (classification) or averaging (regression), reducing overfitting.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Bootstrap Sample</div>
+              <div class="arrow">→</div>
+              <div class="step">N Trees Parallel</div>
+              <div class="arrow">→</div>
+              <div class="step">Vote / Average</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Fraud detection in banking</li>
+              <li>Patient risk stratification</li>
+              <li>Feature importance in EDA</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-tabular">📊 Tabular Data</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Gradient Boosting (XGBoost) -->
+        <article class="algo-card"
+          data-type="supervised"
+          data-domains="tabular"
+          id="card-gradient-boosting">
+          <div class="card-accent" style="--accent:#ef4444"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#ef4444,#f87171)">🚀</div>
+            <div>
+              <h2 class="card-title">Gradient Boosting</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-tabular">Tabular</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Sequentially builds weak learners (shallow trees) where each new tree corrects the residual errors of its predecessors by descending gradient of a loss function. XGBoost and LightGBM are optimized implementations.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Fit Residuals</div>
+              <div class="arrow">→</div>
+              <div class="step">Add Weak Learner</div>
+              <div class="arrow">→</div>
+              <div class="step">Repeat → Ensemble</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Kaggle competition winning models</li>
+              <li>Click-through rate prediction (ads)</li>
+              <li>Supply chain demand forecasting</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-tabular">📊 Tabular Data</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. SVM -->
+        <article class="algo-card"
+          data-type="supervised"
+          data-domains="tabular"
+          id="card-svm">
+          <div class="card-accent" style="--accent:#8b5cf6"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">⚖️</div>
+            <div>
+              <h2 class="card-title">Support Vector Machine</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-tabular">Tabular</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Finds the optimal hyperplane that maximizes the margin between two classes. Kernel tricks (RBF, polynomial) allow non-linear separation by mapping data to higher-dimensional spaces.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Map to Feature Space</div>
+              <div class="arrow">→</div>
+              <div class="step">Max-Margin Plane</div>
+              <div class="arrow">→</div>
+              <div class="step">Classify by Side</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Email spam classification</li>
+              <li>Handwritten digit recognition (MNIST)</li>
+              <li>Bioinformatics gene classification</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-tabular">📊 Tabular Data</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. K-Means Clustering -->
+        <article class="algo-card"
+          data-type="unsupervised"
+          data-domains="tabular"
+          id="card-kmeans">
+          <div class="card-accent" style="--accent:#06b6d4"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#06b6d4,#22d3ee)">🔵</div>
+            <div>
+              <h2 class="card-title">K-Means Clustering</h2>
+              <div class="card-tags">
+                <span class="tag tag-unsupervised">Unsupervised</span>
+                <span class="tag tag-tabular">Tabular</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Partitions data into K clusters by iteratively assigning each point to the nearest centroid and updating centroids to the cluster mean until convergence. Minimizes within-cluster variance.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Init Centroids</div>
+              <div class="arrow">→</div>
+              <div class="step">Assign + Update</div>
+              <div class="arrow">→</div>
+              <div class="step">Converge</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Customer segmentation in retail</li>
+              <li>Document topic grouping</li>
+              <li>Image color quantization</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-tabular">📊 Tabular Data</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. PCA -->
+        <article class="algo-card"
+          data-type="unsupervised"
+          data-domains="tabular"
+          id="card-pca">
+          <div class="card-accent" style="--accent:#ec4899"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#ec4899,#f472b6)">🔬</div>
+            <div>
+              <h2 class="card-title">Principal Component Analysis</h2>
+              <div class="card-tags">
+                <span class="tag tag-unsupervised">Unsupervised</span>
+                <span class="tag tag-tabular">Tabular</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Reduces dimensionality by finding orthogonal axes (principal components) that capture maximum variance in the data via eigenvalue decomposition of the covariance matrix.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Covariance Matrix</div>
+              <div class="arrow">→</div>
+              <div class="step">Eigenvectors</div>
+              <div class="arrow">→</div>
+              <div class="step">Project Data</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Data visualization (2D/3D plots)</li>
+              <li>Noise reduction in sensor data</li>
+              <li>Face recognition pre-processing</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-tabular">📊 Tabular Data</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. CNN -->
+        <article class="algo-card"
+          data-type="supervised"
+          data-domains="cv genai"
+          id="card-cnn">
+          <div class="card-accent" style="--accent:#f97316"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#f97316,#fb923c)">👁️</div>
+            <div>
+              <h2 class="card-title">Convolutional Neural Network</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-cv">Computer Vision</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Uses learnable convolutional filters to automatically detect spatial hierarchies of features (edges → textures → objects) from images. Pooling layers reduce spatial dimensions and build translation invariance.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Conv Filters</div>
+              <div class="arrow">→</div>
+              <div class="step">Pooling</div>
+              <div class="arrow">→</div>
+              <div class="step">FC Classify</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Image classification (ImageNet, ResNet)</li>
+              <li>Object detection (YOLO, Faster R-CNN)</li>
+              <li>Medical image diagnosis (X-ray, MRI)</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-cv">👁️ Computer Vision</span>
+              <span class="domain-pill dp-genai">✨ Generative AI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Transformer (BERT / GPT) -->
+        <article class="algo-card"
+          data-type="supervised"
+          data-domains="nlp genai"
+          id="card-transformer">
+          <div class="card-accent" style="--accent:#3b82f6"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#3b82f6,#60a5fa)">🧠</div>
+            <div>
+              <h2 class="card-title">Transformer (BERT / GPT)</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-nlp">NLP</span>
+                <span class="tag tag-genai">Generative AI</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Uses self-attention mechanisms to model long-range dependencies in sequences without recurrence. BERT encodes bidirectional context for understanding; GPT uses causal (left-to-right) attention for generation.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Tokenize</div>
+              <div class="arrow">→</div>
+              <div class="step">Self-Attention</div>
+              <div class="arrow">→</div>
+              <div class="step">Decode / Classify</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>ChatGPT &amp; Claude — conversational AI</li>
+              <li>Google Search semantic understanding</li>
+              <li>Sentiment &amp; intent classification</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-nlp">💬 NLP</span>
+              <span class="domain-pill dp-genai">✨ Generative AI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. GAN -->
+        <article class="algo-card"
+          data-type="unsupervised"
+          data-domains="cv genai"
+          id="card-gan">
+          <div class="card-accent" style="--accent:#a855f7"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#a855f7,#c084fc)">🎨</div>
+            <div>
+              <h2 class="card-title">Generative Adversarial Network</h2>
+              <div class="card-tags">
+                <span class="tag tag-unsupervised">Unsupervised</span>
+                <span class="tag tag-genai">Generative AI</span>
+                <span class="tag tag-cv">Computer Vision</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            A Generator network creates synthetic data (images, audio) to fool a Discriminator network that tries to distinguish real vs. fake. The two compete in a minimax game until the generator produces realistic outputs.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Generator Creates</div>
+              <div class="arrow">→</div>
+              <div class="step">Discriminator Judges</div>
+              <div class="arrow">→</div>
+              <div class="step">Adversarial Update</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Deepfake / face synthesis (StyleGAN)</li>
+              <li>Data augmentation for rare classes</li>
+              <li>Art &amp; fashion design generation</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-cv">👁️ Computer Vision</span>
+              <span class="domain-pill dp-genai">✨ Generative AI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. Diffusion Models -->
+        <article class="algo-card"
+          data-type="unsupervised"
+          data-domains="cv genai"
+          id="card-diffusion">
+          <div class="card-accent" style="--accent:#14b8a6"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#14b8a6,#2dd4bf)">🌊</div>
+            <div>
+              <h2 class="card-title">Diffusion Models</h2>
+              <div class="card-tags">
+                <span class="tag tag-unsupervised">Unsupervised</span>
+                <span class="tag tag-genai">Generative AI</span>
+                <span class="tag tag-cv">Computer Vision</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Learns to generate images by reversing a gradual noising process. A neural network (U-Net) is trained to denoise images step-by-step. During inference, random noise is iteratively refined into coherent images.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Add Noise (Forward)</div>
+              <div class="arrow">→</div>
+              <div class="step">Learn Denoise</div>
+              <div class="arrow">→</div>
+              <div class="step">Generate (Reverse)</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Stable Diffusion — text-to-image generation</li>
+              <li>DALL-E 3 / Midjourney image synthesis</li>
+              <li>Drug molecule design in biotech</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-cv">👁️ Computer Vision</span>
+              <span class="domain-pill dp-genai">✨ Generative AI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12. Recurrent Neural Network / LSTM -->
+        <article class="algo-card"
+          data-type="supervised"
+          data-domains="nlp"
+          id="card-rnn">
+          <div class="card-accent" style="--accent:#84cc16"></div>
+          <div class="card-header">
+            <div class="card-icon" style="background:linear-gradient(135deg,#84cc16,#a3e635)">🔄</div>
+            <div>
+              <h2 class="card-title">RNN / LSTM</h2>
+              <div class="card-tags">
+                <span class="tag tag-supervised">Supervised</span>
+                <span class="tag tag-nlp">NLP</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-description">
+            Processes sequences by maintaining a hidden state that carries information across time steps. LSTMs add gating mechanisms (forget, input, output gates) to mitigate the vanishing gradient problem.
+          </p>
+          <div class="card-section">
+            <h3 class="section-label">⚡ How It Works</h3>
+            <div class="how-it-works">
+              <div class="step">Input + Hidden State</div>
+              <div class="arrow">→</div>
+              <div class="step">Gate Mechanisms</div>
+              <div class="arrow">→</div>
+              <div class="step">Sequential Output</div>
+            </div>
+          </div>
+          <div class="card-section">
+            <h3 class="section-label">🌍 Real-World Use Cases</h3>
+            <ul class="use-cases">
+              <li>Machine translation (pre-Transformer era)</li>
+              <li>Time-series prediction (stock, weather)</li>
+              <li>Speech recognition systems</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <div class="domain-pills">
+              <span class="domain-pill dp-nlp">💬 NLP</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /cards-grid -->
+    </div>
+  </main>
+
+  <!-- ── TAXONOMY OVERVIEW ── -->
+  <section class="taxonomy-section">
+    <div class="container">
+      <h2 class="section-title">Algorithm Taxonomy at a Glance</h2>
+      <p class="section-subtitle">Visual overview of how algorithms map across learning types and domains</p>
+      <div class="taxonomy-grid">
+
+        <div class="taxonomy-col">
+          <div class="taxonomy-header supervised-header">🧑‍🏫 Supervised Learning</div>
+          <div class="taxonomy-body">
+            <div class="tax-item">Linear Regression</div>
+            <div class="tax-item">Decision Trees</div>
+            <div class="tax-item">Random Forest</div>
+            <div class="tax-item">Gradient Boosting</div>
+            <div class="tax-item">SVM</div>
+            <div class="tax-item">CNN</div>
+            <div class="tax-item">Transformer (BERT/GPT)</div>
+            <div class="tax-item">RNN / LSTM</div>
+          </div>
+        </div>
+
+        <div class="taxonomy-col">
+          <div class="taxonomy-header unsupervised-header">🔍 Unsupervised Learning</div>
+          <div class="taxonomy-body">
+            <div class="tax-item">K-Means Clustering</div>
+            <div class="tax-item">PCA</div>
+            <div class="tax-item">GAN</div>
+            <div class="tax-item">Diffusion Models</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="domain-overview">
+        <div class="domain-box dbox-tabular">
+          <div class="dbox-title">📊 Tabular Data</div>
+          <div class="dbox-items">Linear Regression · Decision Trees · Random Forest · Gradient Boosting · SVM · K-Means · PCA</div>
+        </div>
+        <div class="domain-box dbox-cv">
+          <div class="dbox-title">👁️ Computer Vision</div>
+          <div class="dbox-items">CNN · GAN · Diffusion Models</div>
+        </div>
+        <div class="domain-box dbox-nlp">
+          <div class="dbox-title">💬 NLP</div>
+          <div class="dbox-items">Transformer (BERT/GPT) · RNN / LSTM</div>
+        </div>
+        <div class="domain-box dbox-genai">
+          <div class="dbox-title">✨ Generative AI</div>
+          <div class="dbox-items">GAN · Diffusion Models · Transformer (GPT) · CNN (VAE)</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── COMPARISON TABLE ── -->
+  <section class="table-section">
+    <div class="container">
+      <h2 class="section-title">Quick-Reference Comparison</h2>
+      <p class="section-subtitle">Side-by-side view of all 12 algorithms</p>
+      <div class="table-wrapper">
+        <table class="algo-table" id="algoTable">
+          <thead>
+            <tr>
+              <th>Algorithm</th>
+              <th>Type</th>
+              <th>Primary Domain</th>
+              <th>Output</th>
+              <th>Complexity</th>
+              <th>Key Strength</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Linear Regression</td><td><span class="tag tag-supervised">Supervised</span></td><td>Tabular</td><td>Continuous value</td><td>Low</td><td>Interpretability</td></tr>
+            <tr><td>Decision Tree</td><td><span class="tag tag-supervised">Supervised</span></td><td>Tabular</td><td>Class / Value</td><td>Low</td><td>Explainability</td></tr>
+            <tr><td>Random Forest</td><td><span class="tag tag-supervised">Supervised</span></td><td>Tabular</td><td>Class / Value</td><td>Medium</td><td>Robustness</td></tr>
+            <tr><td>Gradient Boosting</td><td><span class="tag tag-supervised">Supervised</span></td><td>Tabular</td><td>Class / Value</td><td>Medium</td><td>Accuracy on tabular</td></tr>
+            <tr><td>SVM</td><td><span class="tag tag-supervised">Supervised</span></td><td>Tabular</td><td>Class</td><td>Medium</td><td>High-dim margins</td></tr>
+            <tr><td>K-Means</td><td><span class="tag tag-unsupervised">Unsupervised</span></td><td>Tabular</td><td>Cluster labels</td><td>Low</td><td>Fast segmentation</td></tr>
+            <tr><td>PCA</td><td><span class="tag tag-unsupervised">Unsupervised</span></td><td>Tabular</td><td>Components</td><td>Low</td><td>Dimensionality reduction</td></tr>
+            <tr><td>CNN</td><td><span class="tag tag-supervised">Supervised</span></td><td>Computer Vision</td><td>Class / Bounding box</td><td>High</td><td>Spatial feature extraction</td></tr>
+            <tr><td>Transformer</td><td><span class="tag tag-supervised">Supervised</span></td><td>NLP / GenAI</td><td>Text / Embeddings</td><td>Very High</td><td>Long-range context</td></tr>
+            <tr><td>RNN / LSTM</td><td><span class="tag tag-supervised">Supervised</span></td><td>NLP</td><td>Sequence</td><td>High</td><td>Sequential memory</td></tr>
+            <tr><td>GAN</td><td><span class="tag tag-unsupervised">Unsupervised</span></td><td>GenAI / CV</td><td>Synthetic data</td><td>Very High</td><td>Realistic generation</td></tr>
+            <tr><td>Diffusion Models</td><td><span class="tag tag-unsupervised">Unsupervised</span></td><td>GenAI / CV</td><td>Images / Media</td><td>Very High</td><td>State-of-art image quality</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Portfolio Artifact &mdash; ML Algorithm Visual Framework</p>
+      <p class="footer-meta">Created with ❤️ · Covers 12 algorithms across 4 AI/ML domains · 2025</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
